@@ -1,0 +1,3955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<div class="container">
+
+
+<!-- SIDEBAR CONTENT -->
+<section class="sidebar">
+
+  <div class="icon unread-msg" tooltip="Message" id="messageIcon" data-content="messageContent">
+    <span class="verified-icon">24</span>
+    <ion-icon name="mail"></ion-icon>
+  </div>
+
+  <div class="icon" tooltip="Status" id="statusIcon" data-content="statusContent">
+    <ion-icon name="disc"></ion-icon>
+  </div>
+
+  <div class="icon" tooltip="Channels" id="channelIcon" data-content="channelContent">
+    <ion-icon name="help-buoy"></ion-icon>
+  </div>
+
+  <div class="icon" tooltip="Community" id="communityIcon" data-content="communityContent">
+    <ion-icon name="contacts"></ion-icon>
+  </div>
+  <hr />
+
+  <div class="icon" tooltip="Starred" id="starIcon" data-content="starContent">
+    <ion-icon name="star"></ion-icon>
+  </div>
+
+  <div class="icon view-message" tooltip="Meta AI" id="MetaIcon" onclick="openMsg('Meta AI')">
+    <img src="images/meta.png"/>
+  </div>
+
+  <div class="icon bottom" tooltip="Settings" id="settingsIcon" data-content="settingsContent">
+    <ion-icon name="settings"></ion-icon>
+  </div>
+
+  <div class="icon bottom profile" tooltip="Profile" id="profileIcon" data-content="profileContent">
+    <img src="images/my pic.png"  />
+  </div>
+</section>
+
+  <!-- CHATS CONTENT -->
+<section class="chats" id="chats">
+
+<!-- MESSAGE CONTENT -->
+<div id="messageContent">
+  <div class="message-header">
+    <div class="header-top">
+      <h1 title="Chats">Chats</h1>
+      <div class="icons">
+        <div class="contact-section">
+          <ion-icon name="chatboxes" title="New Chat" ></ion-icon>
+        </div>
+        <div class="menu-icon" id="menuIcon">
+          <ion-icon name="more" title="Menu"></ion-icon>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item">New group</div>
+            <div class="dropdown-item">Starred Messages</div>
+            <div class="dropdown-item">Select chats</div>
+            <div class="dropdown-item">Log out</div>
+            <hr />
+            <div class="dropdown-item">Get Whatsapp for Windows</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-box">
+      <ion-icon name="search"></ion-icon>
+      <input type="text" placeholder="Search..." />
+    </div>
+    <div class="buttons">
+      <button class="filter" data-filter="all">All</button>
+      <button class="filter" data-filter="unread">Unread</button>
+      <button class="filter" data-filter="favourites">
+        Favourites
+      </button>
+      <button class="filter" data-filter="groups">Groups</button>
+    </div>
+  </div>
+
+  <div class="message-body">
+    <div class="archive-section">
+      <ion-icon name="archive"></ion-icon>
+      <div class="archive">
+        <p>Archived</p>
+        <b>12</b>
+      </div>
+    </div>
+    <hr />
+
+
+
+    <div class="chatbox msg-dropdown view-message unread unseen favourites" onclick="openMsg('Beloved Brownie')">
+      <div class="profile-pic">
+        <img src="images/Beloved Brownie.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Beloved Brownie</h4>
+          <p class="time">4:15 pm</p>
+        </div>
+        <div class="conversation">
+          <p>Let's meet up for lunch tomorrow</p>
+          <div class="join">
+            <b>2</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message groups" onclick="openMsg('line of legacy')">
+      <div class="profile-pic">
+        <img src="images/line of legacy.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Line of Legacy</h4>
+          <p class="time">3:12 pm</p>
+        </div>
+        <div class="conversation">
+          <ion-icon name="done-all" style="color: green;"></ion-icon>
+          <p>
+            You: With all being said, i would suggest we go with the second option.
+          </p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message unread unseen favourites" onclick="openMsg('Big Naz')">
+      <div class="profile-pic">
+        <img src="images/Big Naz.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Big Naz</h4>
+          <p class="time">7:06 am</p>
+        </div>
+        <div class="conversation">
+          <p>Just finished my workout. What’s up?</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message unread groups" onclick="openMsg('let love lead')">
+      <div class="profile-pic">
+        <img src="images/let Love lead.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Let Love Lead❤️</h4>
+          <p class="time">6:43 am</p>
+        </div>
+        <div class="conversation">
+          <p>Bobo: Happy Birthday my Love</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message seen" onclick="openMsg('Surya Kumar')">
+      <div class="profile-pic">
+        <img src="images/Surya Kumar.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Surya Kumar</h4>
+          <p class="time">6:10 am</p>
+        </div>
+        <div class="conversation">
+          <div class="join">
+            <ion-icon class="undelivered" name="checkmark"></ion-icon>
+            <p>Front-end development is my specialty</p>
+          </div>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message seen" onclick="openMsg('Sophie Stargirl')">
+      <div class="profile-pic">
+        <img src="images/Sophie Stargirl.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Sophie Stargirl</h4>
+          <p class="time">5:55 am</p>
+        </div>
+        <div class="conversation">
+          <div class="join">
+            <ion-icon name="done-all"></ion-icon>
+            <p>It's been a while.</p>
+          </div>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message" onclick="openMsg('New Contact')">
+      <div class="profile-pic">
+        <img src="images/no dp.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>+234 706 893 909</h4>
+          <p class="time">Yesterday</p>
+        </div>
+        <div class="conversation">
+          <p>Thanks once again for patronising us.</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread groups">
+      <div class="profile-pic">
+        <img src="images/cryptogpt.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>CryptoGPT8</h4>
+          <p class="time">Yesterday</p>
+        </div>
+        <div class="conversation">
+          <p>
+            ~ Szymanski: I don't expect much from this but position just
+            incase.
+          </p>
+          <b>1</b>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown groups">
+      <div class="profile-pic">
+        <img src="images/tech talk.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Tech Talk</h4>
+          <p class="time">Yesterday</p>
+        </div>
+        <div class="conversation">
+          <p>~ Maxx: Share your favourite youtube Channel</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread unseen">
+      <div class="profile-pic">
+        <img src="images/N9 Nele.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>N9 Nele</h4>
+          <p class="time">Yesterday</p>
+        </div>
+        <div class="conversation">
+          <p>Just bought a new guitar!</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown seen">
+      <div class="profile-pic">
+        <img src="images/Daisy Love.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Daisy Love</h4>
+          <p class="time">Thursday</p>
+        </div>
+        <div class="conversation">
+          <p>My cat is missing</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown groups">
+      <div class="profile-pic">
+        <img src="images/Geomet.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Geo/Met Graduands</h4>
+          <p class="time">Thursday</p>
+        </div>
+        <div class="conversation">
+          <p>Course Rep: Project defence is next week!!!</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unseen unread">
+      <div class="profile-pic">
+        <img src="images/KEN_ZY.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>KEN_ZY</h4>
+          <p class="time">Thursday</p>
+        </div>
+        <div class="conversation">
+          <p>Bro, you see that game? insane!</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unseen">
+      <div class="profile-pic">
+        <img src="images/Fortune.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Fortune</h4>
+          <p class="time">Wednesday</p>
+        </div>
+        <div class="conversation">
+          <p>Dinner Party on Friday, you are invited</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread">
+      <div class="profile-pic">
+        <img src="images/tiktok.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>TikTok</h4>
+          <p class="time">Wednesday</p>
+        </div>
+        <div class="conversation">
+          <p>
+            Your verificatiov code is 9077, for your security reasons.
+          </p>
+          <b>1</b>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread">
+      <div class="profile-pic">
+        <img src="images/Whatsapp.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Whatsapp Surveys</h4>
+          <p class="time">Wednesday</p>
+        </div>
+        <div class="conversation">
+          <p>
+            Help improve WhatsApp. We'd like to get a feedback from you.
+          </p>
+          <b>1</b>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown groups">
+      <div class="profile-pic">
+        <img src="images/opportunities in tech.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Opportunities in Tech</h4>
+          <p class="time">Tuesday</p>
+        </div>
+        <div class="conversation">
+          <p>~ Cindy Overo: Yeah</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unseen unread">
+      <div class="profile-pic">
+        <img src="images/Ruby Rose.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Ruby Rose</h4>
+          <p class="time">Tuesday</p>
+        </div>
+        <div class="conversation">
+          <p>I found the movie interesting, more recommendation?</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown groups">
+      <div class="profile-pic">
+        <img src="images/vic mannuel lodge.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Vic_Mmanuel Lodge</h4>
+          <p class="time">Tuesday</p>
+        </div>
+        <div class="conversation">
+          <p>
+            ~ BB: Why would he suddenly increase rent in such a short
+            period?
+          </p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown">
+      <div class="profile-pic">
+        <img src="images/Mike Angelo.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Mike Angelo</h4>
+          <p class="time">Tuesday</p>
+        </div>
+        <div class="conversation">
+          <div class="join">
+            <ion-icon name="done-all"></ion-icon>
+            <p>Hey! What's up?</p>
+          </div>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unseen unread">
+      <div class="profile-pic">
+        <img src="images/Omama's Spa.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Omama's Spa</h4>
+          <p class="time">Monday</p>
+        </div>
+        <div class="conversation">
+          <p>The cream is now available</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread groups">
+      <div class="profile-pic">
+        <img src="images/NYSC.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>NYSC 2024 Updates</h4>
+          <p class="time">Monday</p>
+        </div>
+        <div class="conversation">
+          <p>
+            ~ Gold: if the portal opens, each and everyone of us will
+            know.
+          </p>
+          <b>1</b>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread groups">
+      <div class="profile-pic">
+        <img src="images/Ambitious.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Ambitious</h4>
+          <p class="time">Monday</p>
+        </div>
+        <div class="conversation">
+          <p>~ Ben: Have you tried it out?</p>
+          <div class="join">
+            <b>1</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown unread groups">
+      <div class="profile-pic">
+        <img src="images/stallions.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Stallions</h4>
+          <p class="time">Sunday</p>
+        </div>
+        <div class="conversation">
+          <p>~ ObiFX: Hello Fellas</p>
+          <div class="join">
+            <b>42</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown groups">
+      <div class="profile-pic">
+        <img src="images/GWIS.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>GWIS 2010set</h4>
+          <p class="time">Sunday</p>
+        </div>
+        <div class="conversation">
+          <p>Tiwa: its been a while</p>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <hr />
+  </div>
+</div>
+
+<!-- STATUS CONTENT -->
+<div id="statusContent">
+  <div class="status-header">
+    <div class="header">
+      <h1>Status</h1>
+      <div class="side-icons">
+        <div class="menu-icon" id="menuIcon">
+          <ion-icon name="add"></ion-icon>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item">Photos & Videos</div>
+            <div class="dropdown-item">Text</div>
+          </div>
+        </div>
+        <div class="menu-icon" id="menuIcon">
+          <ion-icon name="more"></ion-icon>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item">Status Privacy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-details">
+      <div class="profile-pic">
+        <img src="images/My pic.png"/>
+        <ion-icon name="add" class="verified-icon"></ion-icon>
+      </div>
+      <div class="status-text">
+        <h3>My Status</h3>
+        <p>Click to add status updates</p>
+      </div>
+    </div>
+  </div>
+  <div class="status-section">
+    <div class="status-list">
+      <div class="recents">Recents</div>
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-1.jpg"   />
+        </div>
+        <div class="status-text">
+          <h3>Big Naz</h3>
+          <p>Today at 3:16 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-2.jpg" />
+        </div>
+        <div class="status-text">
+          <h3>Fortune</h3>
+          <p>Today at 1:00 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-3.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>KEN_ZY</h3>
+          <p>Today at 9:44 am</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-4.jpg" />
+        </div>
+        <div class="status-text">
+          <h3>Beloved Brownie</h3>
+          <p>Today at 6:02 am</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-5.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Ruby Rose</h3>
+          <p>Yesterday at 10:53 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-6.jpeg" />
+        </div>
+        <div class="status-text">
+          <h3>N9 Nele</h3>
+          <p>Yesterday at 8:21 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img src="images/status-7.jpg"   />
+        </div>
+        <div class="status-text">
+          <h3>Naomi Nirvana</h3>
+          <p>Yesterday at 8:13 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item unseen">
+        <div class="profile-pic">
+          <img
+            src="images/status-8.jpg"
+            class="status-border"
+            style="width: 50px"
+          />
+        </div>
+        <div class="status-text">
+          <h3>Omama's Spa</h3>
+          <p>Yesterday at 7:52 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="recents">Viewed</div>
+      <div class="status-item seen">
+        <div class="profile-pic">
+          <img src="images/status-9.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Surya Kumar</h3>
+          <p>Today at 6:07 am</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item seen">
+        <div class="profile-pic">
+          <img src="images/status-10.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Paso</h3>
+          <p>Yesterday at 9:25 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item seen">
+        <div class="profile-pic">
+          <img src="images/status-11.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Sophie Stargirl</h3>
+          <p>Yesterday at 8:54 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="status-item seen">
+        <div class="profile-pic">
+          <img src="images/status-12.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Scotty</h3>
+          <p>Yesterday at 7:33 pm</p>
+        </div>
+      </div>
+
+      <div class="status-item seen">
+        <div class="profile-pic">
+          <img src="images/status-13.jpeg"   />
+        </div>
+        <div class="status-text">
+          <h3>Daisy Love</h3>
+          <p>Yesterday at 6:00 pm</p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="muted">
+        <p>Muted</p>
+        <span class="view" onclick="toggleActivity()">Show</span>
+      </div>
+
+      <div class="more">
+        <div class="status-item unseen">
+          <div class="profile-pic">
+            <img src="images/status-14.jpeg"   />
+          </div>
+          <div class="status-text">
+            <h3>Professor John</h3>
+            <p>Today at 4:08 am</p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="status-item unseen">
+          <div class="profile-pic">
+            <img src="images/status-15.jpeg" />
+          </div>
+          <div class="status-text">
+            <h3>Nanani Ninja</h3>
+            <p>Yesterday at 10:51 pm</p>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHANNEL CONTENT -->
+<div id="channelContent">
+  <div class="header">
+    <h1>Channels</h1>
+    <div class="menu-icon" id="menuIcon">
+      <ion-icon name="add"></ion-icon>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-item">Create Channel</div>
+        <div class="dropdown-item">Find Channel</div>
+      </div>
+    </div>
+  </div>
+  <div class="description">Stay updated on your favorite topics</div>
+  <div class="sub-description">Find channels to follow below</div>
+
+  <div class="channel-boxes">
+    <div class="channel-box">
+      <div class="profile-pic">
+        <ion-icon
+          name="checkmark-circle"
+          class="verified-icon"
+        ></ion-icon>
+        <img src="images/Barca.jpeg">
+      </div>
+      <div class="profile-name">FC Barcelona</div>
+      <div class="follow">Follow</div>
+    </div>
+
+    <div class="channel-box">
+      <div class="profile-pic">
+        <ion-icon
+          name="checkmark-circle"
+          class="verified-icon"
+        ></ion-icon>
+        <img src="images/Atlantic.jpg">
+      </div>
+      <div class="profile-name">The Atlantic</div>
+      <div class="follow">Follow</div>
+    </div>
+
+    <div class="channel-box">
+      <div class="profile-pic">
+        <ion-icon
+          name="checkmark-circle"
+          class="verified-icon"
+        ></ion-icon>
+        <img src="images/Pulse.jpg">
+      </div>
+      <div class="profile-name">Pulse.NG</div>
+      <div class="follow">Follow</div>
+    </div>
+
+    <div class="channel-box">
+      <div class="profile-pic">
+        <ion-icon
+          name="checkmark-circle"
+          class="verified-icon"
+        ></ion-icon>
+        <img src="images/Chelsea.jpeg">
+      </div>
+      <div class="profile-name">Chelsea FC</div>
+      <div class="follow">Follow</div>
+    </div>
+  </div>
+  <div class="follow-button">Follow</div>
+</div>
+
+<!-- COMMUNITY CONTENT -->
+<div id="communityContent">
+  <div class="community-section">
+    <div class="header">
+      <h1>Communities</h1>
+    </div>
+    <div class="community">
+      <div class="profile-pic">
+        <img src="images/no dp.jpeg"/>
+      </div>
+      <div class="new-community">New Community</div>
+    </div>
+  </div>
+
+  <div class="sub-community-section">
+    <div class="sub-section">
+      <div class="header">
+        <div class="profile-pic">
+          <img src="images/tech skill hack.jpg"   />
+        </div>
+        <div class="update-text">Tech Skill Hack</div>
+      </div>
+
+      <hr class="hr-line" />
+      <div class="community-list">
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/announcement.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>Announcement</h4>
+              <p class="time">11:42 am</p>
+            </div>
+            <div class="conversation">
+              <p>
+                ~ Admin: Today's dose of motivation to keep you going
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/tech skill 1.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>TSH Data Analytics Bootcamp</h4>
+              <p class="time">10:26 am</p>
+            </div>
+            <div class="conversation">
+              <p>
+                Instructor: Hello Champs, today's zoom meeting has been
+                postponed
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="more">
+          <div class="community-list">
+            <div class="chatbox">
+              <div class="profile-pic">
+                <img src="images/tech skill 3.jpg"   />
+              </div>
+              <div class="details">
+                <div class="title">
+                  <h4>TSH - DAB Content Cohort</h4>
+                  <p class="time">9:06 am</p>
+                </div>
+                <div class="conversation">
+                  <p>
+                    Assistant: Sites to find free mentorship as
+                    beginners in Tech
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="chatbox">
+              <div class="profile-pic">
+                <img src="images/tech skill 2.jpg"   />
+              </div>
+              <div class="details">
+                <div class="title">
+                  <h4>TSH Discussion Group</h4>
+                  <p class="time">7:20 am</p>
+                </div>
+                <div class="conversation">
+                  <p>
+                    ~ Jane: From what i can deduce, i think you are
+                    trying to create different tables
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <p class="view" onclick="toggleActivity()">View All</p>
+    </div>
+
+    <div class="sub-section">
+      <div class="header">
+        <div class="profile-pic">
+          <img src="images/Bitcoin.jpeg"   />
+        </div>
+        <div class="update-text">Cryptohub_withniels</div>
+      </div>
+
+      <hr class="hr-line" />
+      <div class="community-list">
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/announcement.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>Announcement</h4>
+              <p class="time">10:30 am</p>
+            </div>
+            <div class="conversation">
+              <p>~ Milly replied to an announcement</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/learn now pay later.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>Learn Now Pay Later</h4>
+              <p class="time">10:20 am</p>
+            </div>
+            <div class="conversation">
+              <p>
+                ~ Crypto-Hub: Hello everyone, welcome to the first day
+                of learn now, pay later
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="more">
+          <div class="community-list">
+            <div class="chatbox">
+              <div class="profile-pic">
+                <img src="images/crypto hub.jpeg"   />
+              </div>
+              <div class="details">
+                <div class="title">
+                  <h4>CryptoHub</h4>
+                  <p class="time">7:16 am</p>
+                </div>
+                <div class="conversation">
+                  <p>
+                    ~ Bruno: make sure any wallet is connected in the
+                    app
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div class="chatbox">
+              <div class="profile-pic">
+                <img
+                  src="images/learn now pay later chat.jpg
+    "
+                  
+                />
+              </div>
+              <div class="details">
+                <div class="title">
+                  <h4>Learn Now Pay Later Chat</h4>
+                  <p class="time">6:32 am</p>
+                </div>
+                <div class="conversation">
+                  <p>
+                    ~ Code: Great training, you are a very good teacher
+                    Sir.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <p class="view" onclick="toggleActivity()">View All</p>
+    </div>
+
+    <div class="sub-section">
+      <div class="header">
+        <div class="profile-pic">
+          <img src="images/ultimate team.jpg"   />
+        </div>
+        <div class="update-text">Ultimate Team</div>
+      </div>
+
+      <hr class="hr-line" />
+      <div class="community-list">
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/announcement.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>Announcements</h4>
+              <p class="time">5:10 am</p>
+            </div>
+            <div class="conversation">
+              <p>
+                ~Frankovic: From what i heard on this, it seems to be a
+                good project
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="chatbox">
+          <div class="profile-pic">
+            <img src="images/team 5.0.jpg"   />
+          </div>
+          <div class="details">
+            <div class="title">
+              <h4>Team 5.0</h4>
+              <p class="time">Yesterday</p>
+            </div>
+            <div class="conversation">
+              <p>
+                Henry: Potentially big airdrop opportunity with
+                @chainbase
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="more">
+          <div class="community-list">
+            <div class="chatbox">
+              <div class="profile-pic">
+                <img
+                  src="images/ultimate team chat group.jpeg"
+                  
+                />
+              </div>
+              <div class="details">
+                <div class="title">
+                  <h4>Chat Group</h4>
+                  <p class="time">Yesterday</p>
+                </div>
+                <div class="conversation">
+                  <p>+234 706 893 0903 left</p>
+                </div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+
+      <p class="view" onclick="toggleActivity()">View All</p>
+    </div>
+  </div>
+</div>
+
+<!-- STARRED CONTENT -->
+<div id="starContent">
+  <div class="starred-section">
+    <div class="header">
+      <h1>Starred Messages</h1>
+      <div class="menu-icon" id="menuIcon">
+        <ion-icon name="more"></ion-icon>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-item">Create Channel</div>
+          <div class="dropdown-item">Find Channel</div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div>No starred messages</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARCHIVE CONTENT-->
+<div id="archiveContent">
+  <div class="back-arrow">
+    <ion-icon name="arrow-back"></ion-icon>
+    <span>Archived</span>
+  </div>
+  <div class="arc-box">
+    <p class="info">
+      These chats stay archived when new messages are received. To
+      change this experience, go to
+      <strong> Settings &gt; Chats </strong> on your phone.
+    </p>
+
+    <div class="chatbox msg-dropdown">
+      <div class="profile-pic">
+        <img src="images/Chiebuka.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Chiebuka</h4>
+          <p class="time">5:43 am</p>
+        </div>
+        <div class="conversation">
+          <p>
+            I know this is the 4<sup>th</sup> time i'm borrowing that
+            stuff from you
+          </p>
+          <div class="join">
+            <b>2</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown view-message" onclick="openMsg('Olivia')">
+      <div class="profile-pic">
+        <img src="images/Olivia.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Olivia</h4>
+          <p class="time">Yesterday</p>
+        </div>
+        <div class="conversation">
+          <p>I want a bone straight wig as my birthday gift!</p>
+          <b>1</b>
+          <div class="dropdown-arrow">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown">
+      <div class="profile-pic">
+        <img src="images/Assurance prediction.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>AssuRance Prediction</h4>
+          <p class="time">Thursday</p>
+        </div>
+        <div class="conversation">
+          <!-- <ion-icon name="done-all"></ion-icon> -->
+          <p>~ Fixed: 7F84E45 Basketball</p>
+          <div class="join">
+            <b>185</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown">
+      <div class="profile-pic">
+        <img src="images/anyhow group.jpeg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>Anyhow Group</h4>
+          <p class="time">Wednesday</p>
+        </div>
+        <div class="conversation">
+          <!-- <ion-icon name="done-all"></ion-icon> -->
+          <p>+234 814 118 990 left</p>
+          <div class="join">
+            <b>211</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox msg-dropdown">
+      <div class="profile-pic">
+        <img src="images/unizik contact gain.jpg"   />
+      </div>
+      <div class="details">
+        <div class="title">
+          <h4>UNIZIK General Contact Gain</h4>
+          <p class="time">Wednesday</p>
+        </div>
+        <div class="conversation">
+          <!-- <ion-icon name="done-all"></ion-icon> -->
+          <p>~ San: We offer best services on real estate</p>
+          <div class="join">
+            <b>347</b>
+            <div class="dropdown-arrow">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
+
+<!-- CONTACT CONTENT-->
+<div id="contactContent">
+  <div class="back-arrow">
+    <ion-icon name="arrow-back"></ion-icon>
+    <span>Contact</span>
+  </div>
+  <div class="search-box">
+    <ion-icon name="search"></ion-icon>
+    <input type="text" placeholder="Search..." />
+  </div>
+
+  <div class="contact-box">
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/no dp.jpeg"/>
+      </div>
+      <div class="details">
+        <p>New Community</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/no dp.jpeg"   />
+      </div>
+      <div class="details">
+        <p>New Group</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="contacts-on-whatsapp">
+      <p>CONTACTS ON WHATSAPP</p>
+    </div>
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/My pic.png" alt="ME" />
+      </div>
+      <div class="details">
+        <h4>Nnaedozie Dennis</h4>
+        <p>Manage Yourself</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Aisha.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Aisha</h4>
+        <p>Love Me...</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Amira Amour.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Amira Amour</h4>
+        <p>Can't talk, whatsapp only.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Austin Silver.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Austin Silver</h4>
+        <p></p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Beloved Brownie.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Beloved Brownie</h4>
+        <p>
+          Always Believe in Yourself. Know thay you can do it and YES
+          you can.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Big Naz.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Big Naz</h4>
+        <p>Born To Succeed.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Celeb Prince.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Celeb Prince</h4>
+        <p>OFFLINE</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Charles CJ.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Charles CJ</h4>
+        <p>Football is my drug</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Chiebuka.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Chiebuka</h4>
+        <p>All Deals can come in 💵💰</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/City King.jpg"   />
+      </div>
+      <div class="details">
+        <h4>City King</h4>
+        <p>NEVER GIVE UP</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Cynthia Doyle.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Cynthia Doyle</h4>
+        <p>~Melanie~</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Daisy Love.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Daisy Love</h4>
+        <p>A Queen 👸🏻</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Daniella.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Daniella</h4>
+        <p>Know what you are doing, time changes.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Ebuka Obodo.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Ebuka Obodo</h4>
+        <p>Hey Dear... Whatsapp is using me 🤪</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Edwin Bethel.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Edwin Bethel</h4>
+        <p>
+          Just one positive thought in the morning can change your whole
+          day.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Eldorado Paparazzi.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Eldorado Paparazzi</h4>
+        <p>Hey there!</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Emelda.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Emelda</h4>
+        <p>A New Dawn.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Ethan.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Ethan</h4>
+        <p>Peace of Mind is Underrated.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Fatima.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Fatima</h4>
+        <p>Data Analyst</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Fortune.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Fortune</h4>
+        <p>God has written my fortunes</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Gaby Glow.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Gaby Glow</h4>
+        <p>Pray not to become what you criticize!!!</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Hana.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Hana</h4>
+        <p>Hey there! I am using Whatsapp.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/James Leo.jpg"   />
+      </div>
+      <div class="details">
+        <h4>James Leo</h4>
+        <p>Greater Height</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Kelvin Debrunye.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Kelvin Debrunye</h4>
+        <p>Movement</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/KEN_ZY.jpg"   />
+      </div>
+      <div class="details">
+        <h4>KEN_ZY</h4>
+        <p>Very Busy Delegating</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Lizzie.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Lizzie</h4>
+        <p>Sanity is a fragile Illusion.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Maxx Jester.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Maxx Jester</h4>
+        <p>Business Only</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Michael Maverick.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Michael Maverick</h4>
+        <p>Urgent calls Only.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Mike Angelo.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Mike Angelo</h4>
+        <p>In a meeting.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Min-soo.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Min-soo</h4>
+        <p>Hey there! Iam using Whatsapp.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Miss Sunshine.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Miss Sunshine</h4>
+        <p>Happiness is free 🌞</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Mochi.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Mochi</h4>
+        <p>Success is all i wish for</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Mr John.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Mr John</h4>
+        <p>Hey there! I am using Whatsapp.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/N9 Nele.jpg"   />
+      </div>
+      <div class="details">
+        <h4>N9 Nele</h4>
+        <p>Great Ambition, Musician 🎧</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Nalani Ninja.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Nalani Ninja</h4>
+        <p>Hey there! Iam using Whatsapp.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Naomi Nirvana.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Naomi Nirvana</h4>
+        <p>Grace speaks for me</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Oliver Alexa.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Oliver Alexa</h4>
+        <p>Life will always happen</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Olivia.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Olivia</h4>
+        <p>I'm Blessed</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Omama's Spa.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Omama's Spa</h4>
+        <p>Active 24/7</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Paso.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Paso</h4>
+        <p>The aim is to win.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div
+      class="chatbox view-message"
+      onclick="openMsg('Professor John')"
+    >
+      <div class="profile-pic">
+        <img src="images/Professor John.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Professor John</h4>
+        <p>Education is the Key</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Rosie.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Rosie</h4>
+        <p>A Girl with Big Dreams</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Ruby Rose.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Ruby Rose</h4>
+        <p>Tell the story, keep the faith.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Scarlett.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Scarlett</h4>
+        <p>Hey there! Iam using Whatsapp.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Scotty.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Scotty</h4>
+        <p>Dripping is a lifestyle.</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Siddharth Naidu.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Siddharth Naidu</h4>
+        <p>Cybersecurity Consultancy</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Sophie Stargirl.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Sophie Stargirl</h4>
+        <p>Beautyprenuer ❤️💕</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Surya Kumar.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Surya Kumar</h4>
+        <p>Blockchain Developer</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Thiago.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Thiago</h4>
+        <p>Busy</p>
+      </div>
+    </div>
+    <hr />
+
+    <div class="chatbox">
+      <div class="profile-pic">
+        <img src="images/Trust Chisom.jpg"   />
+      </div>
+      <div class="details">
+        <h4>Trust Chisom</h4>
+        <p>Nothing is just nothing!</p>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
+
+<!-- SETTINGS CONTENT -->
+<div id="settingsContent">
+  <div class="header">
+    <h1>Settings</h1>
+  </div>
+
+  <div class="search-box">
+    <ion-icon name="search"></ion-icon>
+    <input type="text" placeholder="Search settings" />
+  </div>
+
+  <div class="profile-box">
+    <div class="profile-picture">
+      <img src="images/my pic.png">
+    </div>
+    <div class="profile-info">
+      <p class="username">Nnaedozie Dennis</p>
+      <p class="about">Web Developer & Data Analyst</p>
+    </div>
+  </div>
+
+  <ul class="settings-list">
+    <li>
+      <ion-icon name="contact"></ion-icon>
+      <div class="setting-text">Account</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="lock"></ion-icon>
+      <div class="setting-text">Privacy</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="chatboxes"></ion-icon>
+      <div class="setting-text">Chats</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="notifications"></ion-icon>
+      <div class="setting-text">Notifications</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="code-working"></ion-icon>
+      <div class="setting-text">Keyboard Shortcuts</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="help-circle"></ion-icon>
+      <div class="setting-text">Help</div>
+    </li>
+    <hr />
+    <li>
+      <ion-icon name="log-out" class="logout-icon"></ion-icon>
+      <div class="setting-text logout-text">Log out</div>
+    </li>
+    <hr />
+  </ul>
+</div>
+
+<!-- PROFILE CONTENT -->
+<div id="profileContent">
+  <div class="header">
+    <h1>Profile</h1>
+  </div>
+  <div class="profile-picture">
+    <img src="images/my pic.png" >
+  </div>
+
+  <div class="box">
+    <div class="info-label">Your Name</div>
+    <div class="info-row">
+      <div class="info-text">Nnaedozie Dennis</div>
+      <div class="info-edit"><ion-icon name="create"></ion-icon></div>
+    </div>
+  </div>
+
+  <div class="info-note">
+    This is not your username or pin. This name will be visible to your
+    contacts.
+  </div>
+
+  <div class="box">
+    <div class="info-label">About</div>
+    <div class="info-row">
+      <div class="info-text">Web Developer & Data Analyst</div>
+      <div class="info-edit"><ion-icon name="create"></ion-icon></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CHATS CONTENT -->
+<section class="open-chat" id="open-chat">
+  <div id="hero-background">
+    <div class="content">
+      <img src="images/whatsapp-pic.png" class="chat-image" />
+      <h1 class="download-text">Download Whatsapp for Windows</h1>
+      <p class="description-text">
+        Make calls, share your screen, and get a faster experience when
+        you download the Windows app
+      </p>
+      <button class="download-button">Get from Microsoft Store</button>
+    </div>
+
+    <div class="encryption-info">
+      <ion-icon name="lock"></ion-icon>
+      <span>Your personal messages are end-to-end encrypted</span>
+    </div>
+  </div>
+
+  <div id="Beloved Brownie" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Beloved Brownie.jpg"   />
+        </div>
+        <h4>
+          Beloved Brownie <br />
+          <span>Online</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">TODAY</div>
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Hello Baby</p>
+          <div class="time">
+            <span>12:15 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>How’s your day going? 😊</p>
+          <div class="time">
+            <span>12:16 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>Beloved Brownie</h4>
+              <p>Hello Baby</p>
+            </div>
+          </div>
+          <p>
+            Hi Love <br />
+            It’s going alright, just work and all. But it’s better now
+            that I’m talking to you
+          </p>
+          <div class="time">
+            <span>12:18 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Aww, you always know what to say. Making me smile over here!
+            💖 <br />
+            What’s been keeping you busy?
+          </p>
+          <div class="time">
+            <span>1:32 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Just the usual grind. But I can’t complain.
+            <br />
+            How about you? <br />
+          </p>
+          <div class="time">
+            <span>2:11 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>Any fun adventures today?</p>
+          <div class="time">
+            <span>2:11 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>Any fun adventures today?</p>
+            </div>
+          </div>
+          <p>
+            Not much today, just a bit of shopping and caught up on my
+            favorite show. <br />
+            Wish you were here to watch it with me!
+          </p>
+          <div class="time">
+            <span>2:46 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            You know I’d be right there, popcorn in hand, if I could.
+            <br />
+            Which show was it this time?
+          </p>
+          <div class="time">
+            <span>3:35 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            The one I told you about last week! <br />
+            It’s getting so good, you have to catch up so we can talk
+            about it!
+          </p>
+          <div class="time">
+            <span>3:44 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Alright, alright! I’ll start it tonight so we can have our
+            little TV talk.
+          </p>
+          <div class="time">
+            <span>4:10 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Yay! That makes me so happy. <br />
+            Now I’m even more excited for our show chats. 😄
+          </p>
+          <div class="time">
+            <span>4:13 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Anything to make my Brownie smile.</p>
+          <div class="time">
+            <span>4:13 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-msg">
+        <div class="date">2 UNREAD MESSAGE</div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            You’re the sweetest, you know that? <br />
+            Speaking of which…
+          </p>
+          <div class="time">
+            <span>4:14 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>let’s meet up for lunch tomorrow!</p>
+          <div class="time">
+            <span>4:15 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Big Naz" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Big Naz.jpg"   />
+        </div>
+        <h4>
+          Big Naz <br />
+          <span>Last seen today at 3:22 pm</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">YESTERDAY</div>
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Yo, bro! Any plans to hit the gym with me soon?</p>
+          <div class="time">
+            <span>4:47 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Haha, I knew it! You won’t give up till I say yes.</p>
+          <div class="time">
+            <span>4:50 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            That’s right! Gotta get you in here. You’ll feel awesome
+            after, trust me.
+          </p>
+          <div class="time">
+            <span>4:55 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>What’s holding you back?</p>
+          <div class="time">
+            <span>4:56 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>Big Naz</h4>
+              <p>What’s holding you back?</p>
+            </div>
+          </div>
+          <p>
+            Honestly? Just need the push to start. <br />
+            I don’t wanna be that guy struggling with weights while
+            everyone’s lifting serious stuff.
+          </p>
+          <div class="time">
+            <span>4:58 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Man, we all start somewhere. Don’t worry about anyone else.
+            <br />
+            You’ll have me right there. Let’s get you in for a weekend
+            session.
+          </p>
+          <div class="time">
+            <span>5:00 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Alright, alright. Saturday sound good?</p>
+          <div class="time">
+            <span>5:07 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Yes! Saturday it is. We’ll start with the basics. <br />
+            I’ll walk you through everything. No rush.
+          </p>
+          <div class="time">
+            <span>5:12 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Haha, I’m in. No turning back now!</p>
+          <div class="time">
+            <span>5:14 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            That’s the spirit! Just think of it as investing in yourself.
+            <br />
+            We’ll start slow, and you’ll build up from there.
+          </p>
+          <div class="time">
+            <span>5:16 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>You make it sound like I’ll be a pro in no time!</p>
+          <div class="time">
+            <span>5:18 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Hey, with consistency, anything’s possible. <br />
+            Who knows? Soon you’ll be pushing me to keep up.
+          </p>
+          <div class="time">
+            <span>5:25 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Haha, yeah, we’ll see! Thanks for the motivation, man.</p>
+          <div class="time">
+            <span>5:32 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Anytime, bro. Gotta keep my workout buddy inspired!</p>
+          <div class="time">
+            <span>5:44 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="date">TODAY</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Wagwan Bro</p>
+          <div class="time">
+            <span>5:45 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Off to gym, i will let you know when i'm back</p>
+          <div class="time">
+            <span>5:48 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Alright</p>
+          <div class="time">
+            <span>5:50 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="new-msg">
+        <div class="date">1 UNREAD MESSAGE</div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Just finished my workout. What's up?</p>
+          <div class="time">
+            <span>7:06 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Surya Kumar" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Surya Kumar.jpg"   />
+        </div>
+        <h4>
+          Surya Kumar <br />
+          <span>Last seen today at 5:50 am</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">YESTERDAY</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Hello <br />
+            I'm Dennis <br />The guy from Linkedln
+          </p>
+          <div class="time">
+            <span>7:07 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>What's up Buddy</p>
+          <div class="time">
+            <span>7:15 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            I'm good <br />
+            How is your day going
+          </p>
+          <div class="time">
+            <span>7:21 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Cool. <br />
+            Good to finally catch up. So, tell me what part of tech are
+            you diving into these days?
+          </p>
+          <div class="time">
+            <span>7:26 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Good to catch up with you too! <br />
+            Right now, i'm into front-end development.
+          </p>
+          <div class="time">
+            <span>7:27 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Nice! Front-end is where all the creativity meets function.
+            <br />
+            Any projects you’re working on?
+          </p>
+          <div class="time">
+            <span>7:51 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Yeah, a chat application actually. It’s been fun to build, and
+            I’m learning a lot as I go.
+          </p>
+          <div class="time">
+            <span>8:16 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            That sounds solid! It’s a great way to showcase skills. <br />
+            Let me know if you ever want to brainstorm or need some ideas.
+          </p>
+          <div class="time">
+            <span>8:41 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Will do! Always good to learn from a pro.</p>
+          <div class="time">
+            <span>8:55 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="date">TODAY</div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Haha, happy to help anytime! So, any plans to explore other
+            areas of tech in the future?
+          </p>
+          <div class="time">
+            <span>5:50 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Definitely! <br />
+            But for now...
+          </p>
+          <div class="time">
+            <span>6:09 am</span>
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>Front-end development is my specialty.</p>
+          <div class="time">
+            <span>6:10 am</span>
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Sophie Stargirl" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Sophie Stargirl.jpg"   />
+        </div>
+        <h4>
+          Sophie Stargirl <br />
+          <span>Online</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">TODAY</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Hello Dear</p>
+          <div class="time">
+            <span>5:55 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>It's been a while.</p>
+          <div class="time">
+            <span>5:55 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="New Contact" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/no dp.jpeg"   />
+        </div>
+        <h4>
+          +234 706 893 909<br />
+          <span>Online</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">YESTERDAY</div>
+
+      <div class="new-contact-box">
+        <div class="profile-pic">
+          <img src="images/no dp.jpeg"   />
+        </div>
+        <h1>+234 706 893 909</h1>
+        <br />
+        <span>~Blaze Logistics</span>
+        <p>Not a contact . No group in common</p>
+
+        <div class="safety">
+          <ion-icon name="warning"></ion-icon>
+          <p>Safety Tools</p>
+        </div>
+        <div class="block">
+          <ion-icon name="remove-circle-outline"></ion-icon>
+          <p>Block</p>
+        </div>
+      </div>
+
+      <div class="encryption">
+        <p>
+          <ion-icon name="lock"></ion-icon> Messages are ene-to-end
+          encrypted. No one outside of this chat, not even Whatsapp, can
+          read or listen to them. click to learn more
+        </p>
+      </div>
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Hey there! Just wanted to check in and see if everything’s
+            good with the product.
+          </p>
+          <div class="time">
+            <span>5:10 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Hey! Yeah, I gave it a go, and it’s working great so far.</p>
+          <div class="time">
+            <span>5:12 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>Exactly what I needed.</p>
+          <div class="time">
+            <span>5:13 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>Exactly what I needed.</p>
+            </div>
+          </div>
+          <p>Awesome! That’s good to hear.</p>
+          <div class="time">
+            <span>5:14 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>Anything I can help with, or any questions?</p>
+          <div class="time">
+            <span>5:15 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>+234 706 893 909</h4>
+              <p>Anything I can help with, or any questions?</p>
+            </div>
+          </div>
+          <p>Not right now, but I appreciate you checking in.</p>
+          <div class="time">
+            <span>5:17 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>It’s rare to get such good follow-up service!</p>
+          <div class="time">
+            <span>5:17 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s rare to get such good follow-up service!</p>
+            </div>
+          </div>
+          <p>
+            Thanks, I try to make sure everyone’s happy with their order.
+            <br />
+            Just reach out if anything comes up.
+          </p>
+          <div class="time">
+            <span>5:18 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Will do. Definitely!</p>
+          <div class="time">
+            <span>5:19 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Thanks once again for patronising us.</p>
+          <div class="time">
+            <span>5:20 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Olivia" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Olivia.jpg"   />
+        </div>
+        <h4>
+          Olivia<br />
+          <span>last seen today at 2:22 pm</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">YESTERDAY</div>
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Hello Dear <br />
+            How’s it going?
+          </p>
+          <div class="time">
+            <span>8:05 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Hey! Not much, just wrapping up some work.</p>
+          <div class="time">
+            <span>8:07 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>How about you?</p>
+          <div class="time">
+            <span>8:08 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>I’m good! Just daydreaming about my upcoming birthday.</p>
+          <div class="time">
+            <span>8:15 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>Got any ideas for how to celebrate?</p>
+          <div class="time">
+            <span>8:16 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>We should definitely do something fun!</p>
+          <div class="time">
+            <span>8:33 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>Any thoughts on what you want to do?</p>
+          <div class="time">
+            <span>8:34 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>I’m thinking maybe a small get-together with friends.</p>
+          <div class="time">
+            <span>8:59 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>
+            But honestly, I really wanting something special from my
+            friends this year.
+          </p>
+          <div class="time">
+            <span>9:00 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That sounds like a great idea! <br />
+            What’s this special thing you have in mind?
+          </p>
+          <div class="time">
+            <span>9:40 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="new-msg">
+        <div class="date">2 UNREAD MESSAGE</div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Well, from you,</p>
+          <div class="time">
+            <span>9:56 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>I want a bone straight wig as my birthday gift!</p>
+          <div class="time">
+            <span>9:56 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Professor John" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/Professor John.jpg"   />
+        </div>
+        <h4>
+          Professor John<br />
+          <span>Online</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">24 October 2024</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Good evening Sir</p>
+          <div class="time">
+            <span>5:00 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Evening Dennis <br />
+            I hope you're doing well.
+          </p>
+          <div class="time">
+            <span>5:45 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>How has everything been going with your project?</p>
+          <div class="time">
+            <span>5:46 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Yes, things are going smoothly so far. The project has been
+            quite a learning experience.
+          </p>
+          <div class="time">
+            <span>5:48 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>The project has been quite a learning experience.</p>
+          <div class="time">
+            <span>5:49 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>I’m glad to hear that!</p>
+          <div class="time">
+            <span>6:10 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>
+            Have you encountered any particular challenges along the way?
+          </p>
+          <div class="time">
+            <span>6:11 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>A few, actually! Mostly around organizing the structure.</p>
+          <div class="time">
+            <span>6:14 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>But I’ve been working through them step by step.</p>
+          <div class="time">
+            <span>6:15 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            That’s the best way to approach it—break down the issues and
+            handle them one at a time.
+          </p>
+          <div class="time">
+            <span>6:18 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>If you need any advice, feel free to ask.</p>
+          <div class="time">
+            <span>6:18 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Thank you, I appreciate that!</p>
+          <div class="time">
+            <span>6:20pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>I might take you up on that if I get stuck again.</p>
+          <div class="time">
+            <span>6:20 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            You’re always welcome to reach out. <br />
+            Keep up the good work!
+          </p>
+          <div class="time">
+            <span>7:01 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Alright Sir. Thank you very much.</p>
+          <div class="time">
+            <span>7:03 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="line of legacy" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/line of legacy.jpg"   />
+        </div>
+        <h4>
+          Line of Legacy <br />
+          <p
+            >Click here for group info</p>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">TODAY</div>
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #7f66ff" >Maya</p>
+            <span>+1 (689) 205-8497</span>
+          </div>
+          <p>
+            Alright, team! <br />
+            So, we’ve got two main options for the project direction.
+          </p>
+          <div class="time">
+            <span>2:57 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>What are everyone’s thoughts?</p>
+          <div class="time">
+            <span>2:58 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #0ce70c;">Obinna</p>
+            <span>+233 546 930 4462</span>
+          </div>
+          <div class="reply">
+            <div class="left" style="background-color: #7f66ff"></div>
+            <div class="right">
+              <h4 style="color: #7f66ff">Maya</h4>
+              <p>What are everyone’s thoughts?</p>
+            </div>
+          </div>
+          <p>
+            I think Option 1 has potential, but it feels a bit risky to
+            me. We’d need a solid backup plan if anything goes off track.
+          </p>
+          <div class="time">
+            <span>3:00 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <div class="reply">
+            <div class="left" style="background-color: #7f66ff"></div>
+            <div class="right">
+              <h4 style="color: #7f66ff">Maya</h4>
+              <p>What are everyone’s thoughts?</p>
+            </div>
+          </div>
+          <p>
+            Agreed, the first option has its strengths, but it might stretch us
+            thin with the current timeline. How about you, Mark?
+          </p>
+          <div class="time">
+            <span>3:01 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>How about you, Mark?</p>
+          <div class="time">
+            <span>3:02 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #fe2e74;">Juliet</p>
+            <span>+221 984 438 4433</span>
+          </div>
+          <div class="reply">
+            <div class="left" style="background-color: #7f66ff"></div>
+            <div class="right">
+              <h4 style="color: #7f66ff">Maya</h4>
+              <p>What are everyone’s thoughts?</p>
+            </div>
+          </div>
+          <p>
+            Good point, Obinna. But the first could also make a strong
+            impact.
+          </p>
+          <div class="time">
+            <span>3:04 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>
+            I’m a bit torn—it could really pay off if we execute it well.
+          </p>
+          <div class="time">
+            <span>3:05 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #25d366;">Mark</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>How about you, Mark?</p>
+            </div>
+          </div>
+          <p >
+            I actually lean towards the second option. It’s a safer path and fits
+            within our resources. Plus, I think it’ll be easier to get the
+            team onboard.
+          </p>
+          <div class="time">
+            <span>3:07 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #7f66ff">Maya</p>
+            <span>+1 (689) 205-8497</span>
+          </div>
+          <p>Mark makes a good point.</p>
+          <div class="time">
+            <span>3:08 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>
+            Option 2 would be smoother, but would it have the same reach
+            as Option 1? <br />That’s what I keep going back to.
+          </p>
+          <div class="time">
+            <span>3:09 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #6ea855;">Sonia</p>
+            <span>+255 543 793 9092</span>
+          </div>
+          <div class="reply">
+            <div class="left" style="background-color: #7f66ff"></div>
+            <div class="right">
+              <h4 style="color: #7f66ff">Maya</h4>
+              <p>Mark makes a good point.</p>
+            </div>
+          </div>
+          <p>
+            True! <br />
+            And if we go with the second, we’d need to focus on maximizing
+            impact without pushing boundaries too far.
+          </p>
+          <div class="time">
+            <span>3:11 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            With all being said, I would suggest we go with the second
+            option.
+          </p>
+          <div class="time">
+            <span>3:12 pm</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="let love lead" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/let Love lead.jpeg"   />
+        </div>
+        <h4>
+          Let Love Lead <br />
+          <p> Angelo, Billie, Bobo, Eilish, Goody, Jess...</p>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <div class="video">
+          <ion-icon name="videocam"></ion-icon>
+        </div>
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date">TODAY</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Hello Fam</p>
+          <div class="time">
+            <span>6:00 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message two-msg">
+        <div class="msg">
+          <p>It's Jessica's Day 🥳</p>
+          <div class="time">
+            <span>6:01 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #7f66ff;">Billie</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s Jessica's Day 🥳</p>
+            </div>
+          </div>
+          <p>
+            Happy Birthday, Jess! Hope you’re getting spoiled today! 🎉
+          </p>
+          <div class="time">
+            <span>6:10 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #fe2e74;">Eilish</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s Jessica's Day 🥳</p>
+            </div>
+          </div>
+          <p>Yes, happy birthday! Any big plans for the day?</p>
+          <div class="time">
+            <span>6:14 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #6ea855;">Jessica</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s Jessica's Day 🥳</p>
+            </div>
+          </div>
+          <p>Thanks DennyBlaze</p>
+          <div class="time">
+            <span>6:19 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message two-msg">
+        <div class="msg">
+          <p>
+            Thanks, Billie and Eilish! <br />
+            Not sure yet, just taking it easy so far. Might go out later,
+            though!
+          </p>
+          <div class="time">
+            <span>6:20 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #007bfc;">Mark</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s Jessica's Day 🥳</p>
+            </div>
+          </div>
+          <p>
+            Happy birthday, Jess! Make sure you enjoy every moment—you
+            deserve it! 🥳
+          </p>
+          <div class="time">
+            <span>6:38 am</span>
+          </div>
+        </div>
+      </div>
+      <div class="new-msg">
+        <div class="date">1 UNREAD MESSAGE</div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <div class="name">
+            <p style="color: #25d366;">Bobo</p>
+          </div>
+          <div class="reply">
+            <div class="left"></div>
+            <div class="right">
+              <h4>You</h4>
+              <p>It’s Jessica's Day 🥳</p>
+            </div>
+          </div>
+          <p>Happy birthday, my love!</p>
+          <div class="time">
+            <span>6:43 am</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <ion-icon name="attach"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="mic"></ion-icon>
+      <ion-icon name="send"></ion-icon>
+    </div>
+  </div>
+
+  <div id="Meta AI" class="right-side">
+    <div class="header">
+      <div class="img-text">
+        <div class="user-image">
+          <img src="images/meta.png"/>
+        </div>
+        <h4>
+          <div class="meta-checked">
+            <p> Meta AI </p> 
+            <div class="profile-pic">
+              <img src="images/checked.png">
+            </div>
+          </div>
+          <span>with Llama 3.2</span>
+        </h4>
+      </div>
+      <div class="nav-icons">
+        <ion-icon name="search"></ion-icon>
+        <ion-icon name="more"></ion-icon>
+      </div>
+    </div>
+
+    <div class="discussion">
+      <div class="date" > SATURDAY</div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            What's the most interesting fact you've come across recently?
+          </p>
+          <div class="time">
+            <span>5:44 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>Did you know that there's a species of jellyfish that's immortal? The Turritopsis dohrnii, also known as the "immortal jellyfish," can transform its body into a younger state through a process called transdifferentiation.</p>
+          <div class="time">
+            <span>5:44 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            Wow, that's mind-blowing! How does it do that?
+          </p>
+          <div class="time">
+            <span>5:46 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Scientists are still studying the process, but essentially, the jellyfish can convert its adult cells back into polyp stage, allowing it to regenerate and start its life cycle again.
+          </p>
+          <div class="time">
+            <span>5:46 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That's amazing. Could this discovery lead to human immortality?
+          </p>
+          <div class="time">
+            <span>5:47 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            While it's fascinating, it's still unclear if this process can be applied to humans. However, researchers are exploring its potential for regenerative medicine and aging studies.
+          </p>
+          <div class="time">
+            <span>5:48 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That's promising. What other fascinating sea creatures should I learn about?
+          </p>
+          <div class="time">
+            <span>5:49 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Have you heard of the axolotl? It's a salamander that regenerates its limbs and organs.
+          </p>
+          <div class="time">
+            <span>5:49 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>Incredible! Nature never ceases to amaze. How does the axolotl regenerate?</p>
+          <div class="time">
+            <span>5:51 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Axolotls have stem cells throughout their bodies, allowing them to regrow lost limbs, eyes, and parts of their brain.
+          </p>
+          <div class="time">
+            <span>5:51 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That sounds like science fiction! What about other animals with unique abilities?
+          </p>
+          <div class="time">
+            <span>5:52 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            The gecko's ability to regrow its tail is impressive. Some species of flatworms and sea cucumbers can also regenerate lost body parts.
+          </p>
+          <div class="time">
+            <span>5:52 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            I had no idea. What about the intelligence of sea creatures?
+          </p>
+          <div class="time">
+            <span>5:54 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Octopuses are highly intelligent, problem-solving, and have been observed using tools.
+          </p>
+          <div class="time">
+            <span>5:55 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That's amazing! I've seen videos of octopuses opening jars.
+          </p>
+          <div class="time">
+            <span>5:56 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Exactly! Their intelligence and adaptability are remarkable.
+          </p>
+          <div class="time">
+            <span>5:56 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            What about the deepest part of the ocean? What's down there?
+          </p>
+          <div class="time">
+            <span>5:57 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            The Challenger Deep, in the Mariana Trench, is the lowest point. It's largely unexplored, but we've discovered unique organisms thriving in extreme conditions.
+          </p>
+          <div class="time">
+            <span>5:57 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            I'm fascinated by the ocean's mysteries. Are there any upcoming ocean-related research projects?
+          </p>
+          <div class="time">
+            <span>5:57 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            Yes, there are several initiatives exploring ocean conservation, marine life, and the impact of climate change.
+          </p>
+          <div class="time">
+            <span>5:58 am</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box my-message">
+        <div class="msg">
+          <p>
+            That's reassuring. Thanks for sharing these incredible facts!
+          </p>
+          <div class="time">
+            <span>6:04 am</span>
+            <ion-icon name="done-all"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg_box friend-message">
+        <div class="msg">
+          <p>
+            You're welcome! Nature's wonders never cease to inspire.
+          </p>
+          <div class="time">
+            <span>6:04 am</span>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+    <div class="discussion-input">
+      <ion-icon name="happy"></ion-icon>
+      <input type="text" placeholder="Type a message" />
+      <ion-icon name="send"></ion-icon>
+    </div>
+</div>
+</section>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
